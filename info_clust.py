@@ -33,9 +33,6 @@ def similarity_score(P,S):
 	SCs = np.array([get_SC(clust,P,S) for clust in xrange(N_C)])
 	return SCs.sum()
 
-def discretize_P(P):
-	return np.array([np.round(k) for k in P])
-
 ## main function
 
 def info_cluster(S, N_C, T = 0.1, steps = None, epsilon = 10.0**(-30.0)):

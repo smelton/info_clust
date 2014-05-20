@@ -18,7 +18,7 @@ def get_sim(samples):
 	return np.array([[d(a,b) for a in samples] for b in samples])
 
 def plot_clusters(data,P):
-	DP = ic.discretize_P(P)
+	DP = np.round(P)
 	pot_cols = np.array([rainbow(P.shape[1])]*len(data))
 	colors = pot_cols[DP==1.]
 	plt.scatter(data.T[0],data.T[1], c = colors)
